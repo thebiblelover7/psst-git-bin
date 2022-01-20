@@ -25,9 +25,8 @@ jobs:
 
       - name: Arch Linux's package action
         uses: datakrama/archlinux-package-action@v1.1.1
-        with:
-          path: psst-git-bin-x86_64.pkg.tar.zst
+        
       - uses: actions/upload-artifact@v2
         with:
           name: psst-git-bin-x86_64.pkg.tar.zst
-          path: target/release/psst-git-bin-x86_64.pkg.tar.zst
+          path: "*.tar.zst"

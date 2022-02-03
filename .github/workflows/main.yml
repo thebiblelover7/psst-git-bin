@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: psst-gui
-          path: target/release/psst-gui
+          path: psst/target/release/psst-gui
 
           
 #      - name: Publish AUR package

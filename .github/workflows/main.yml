@@ -37,6 +37,8 @@ jobs:
           repository: jpochyla/psst
           path: psst
         
+      - name: Fetch Deps
+        run: cargo fetch --locked --target "x86_64-unknown-linux-gnu"
       
       - name: Build psst
         run: cargo build --frozen --release --all-features --manifest-path psst/Cargo.toml

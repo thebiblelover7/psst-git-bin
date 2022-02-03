@@ -38,7 +38,7 @@ jobs:
           path: psst
         
       - name: Fetch Deps
-        run: cargo fetch --locked --target "x86_64-unknown-linux-gnu"
+        run: cargo fetch --locked --target "x86_64-unknown-linux-gnu" --manifest-path psst/Cargo.toml
       
       - name: Build psst
         run: cargo build --frozen --release --all-features --manifest-path psst/Cargo.toml

@@ -35,6 +35,7 @@ jobs:
         uses: sudosubin/git-clone-action@v1.0.1
         with:
           repository: jpochyla/psst
+          path: psst
         
       
       - name: Build psst

@@ -29,12 +29,16 @@ jobs:
       - name: Install Linux Dependencies
         run: sudo apt-get install -y libgtk-3-dev libssl-dev libasound2-dev
       
-      - name: git clone jpochyla/psst
-        run: git clone https://github.com/jpochyla/psst && cd psst
+#      - name: git clone jpochyla/psst
+#        run: git clone https://github.com/jpochyla/psst && cd psst
+      - name: Git clone jpochyla/psst
+        uses: sudosubin/git-clone-action@v1.0.1
+        with:
+          repository: jpochyla/psst
         
       
       - name: Build psst
-        run: cargo build --frozen --release --all-features
+        run: cargo build --frozen --release --all-features --manifest-path psst/Cargo.toml
         
       - name: Upload binary
         uses: actions/upload-artifact@v2

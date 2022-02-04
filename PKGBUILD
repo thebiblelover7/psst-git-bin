@@ -1,4 +1,4 @@
-# Maintainer: garionion <garionion@entr0py.de>
+# Maintainer: thebiblelover7 < ${echo "c2FuZGFkcmllbEBvdXRsb29rLmNvbQo=" | base64 -d}>
 
 pkgname=psst-git-bin
 _pkgname="psst"

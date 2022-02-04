@@ -50,6 +50,15 @@ jobs:
           path: psst/target/release/psst-gui
 
           
+      - name: add version to file
+        run: cd psst && printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)" > version
+
+      - name: upload version file
+        uses: actions/upload-artifact@v2
+        with:
+          name: version
+          path: psst/version
+
 #      - name: Publish AUR package
 #        uses: KSXGitHub/github-actions-deploy-aur@v2.2.5
 #        with:

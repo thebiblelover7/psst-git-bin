@@ -26,6 +26,12 @@ jobs:
 #      - name: Arch Linux's package action
 #        uses: hapakaien/archlinux-package-action@bugfix/sudoers-user
         
+      - name: Update packages
+        run: sudo apt-get update -y
+
+      - name: Upgrade packages
+        run: sudo apt-get upgrade -y
+
       - name: Install Linux Dependencies
         run: sudo apt-get install -y libgtk-3-dev libssl-dev libasound2-dev
       
